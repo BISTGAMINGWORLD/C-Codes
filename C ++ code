@@ -1,0 +1,50 @@
+Write a C++ program to Divide Two numbers and catch Divisiblity by 0 Exception ?
+// Here iss C++ Code.
+
+#include <iostream>
+class number 
+{
+    int n1,d1,divi;
+    public:
+    number(int x,int y)
+    {
+        n1=x;
+        d1=y;
+    }
+    void print();
+    void division();
+};
+void number::print()
+{
+ std::cout<<"Numerator= "<<"\n";
+ std::cout<<n1;
+ std::cout<<"denominator= "<<"\n";
+ std::cout<<d1;
+}
+
+void number::division()
+{
+  try
+  {
+      if(d1==0)
+      throw 0;
+      divi=n1/d1;
+      std::cout<<"Division is "<< divi<<"\n";
+    }  
+    catch (int a)
+    {
+        std::cout<<"the Division is not posible"<<"\n";
+    }
+}
+
+int main() 
+{
+    number x (12,3);
+    x.division();
+    x.print();
+    number y (14,0);
+    y.division();
+    number z (0,0);
+    z.division();
+    return 0;
+}
